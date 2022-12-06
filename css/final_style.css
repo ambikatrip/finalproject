@@ -9,6 +9,41 @@
   height: auto;
 }
 
+/* .sidenav{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    height:100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #243820;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+} */
+
+/* .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #CBD6BC;
+    display: block;
+  } */
+
+/* .sidenav a:hover {
+    color: white;
+} */
+
+/* .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
 nav li{
     padding-right:10px;
 	display: inline;
@@ -42,6 +77,68 @@ nav{
 
 body{
     background-color:#cbd6bc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center img{
+    display: none;
+}
+
+fieldset{
+    background-color: #243820;
+    color:white;
+    
+}
+
+textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    width: 80%;
+    height: 70px;
+    border: none;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+  }
+
+input[type=submit]{
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: 2px solid #467247;
+    color: black;
+    background-color: #CBD6BC;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%
+}
+
+input[type=submit]:hover{
+    background-color: #467247;
+    color: white;
+}
+fieldset p {
+    text-align: center;
+}
+
+fieldset h1 {
+    text-align: center;
+}
+
+legend{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
 }
 
 button{
@@ -69,10 +166,6 @@ button:hover{
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
-    text-align: center;
-}
-
-.title{
     text-align: center;
 }
 
@@ -135,6 +228,10 @@ p {
 
 @media screen and (min-width: 700px) {
 
+    .center img{
+        display: inline;
+    }
+
     .newspaper_gallery{
         display: grid;
         grid-template-columns: auto auto;
@@ -150,7 +247,7 @@ p {
     .hobby_gallery {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -159,6 +256,18 @@ p {
         margin: 10px;
         border: 5px solid black;
         width: 40%;
+    }
+
+    fieldset p {
+        text-align: left;
+    }
+    
+    fieldset h1 {
+        text-align: left;
+    }
+
+    input[type=submit]{
+        width: 50%
     }
 }
 
@@ -226,4 +335,19 @@ p {
         box-shadow: 5px 5px 5px #54704e;
         
     }
+    fieldset p {
+        text-align: left;
+    }
+    
+    fieldset h1 {
+        text-align: left;
+    }
+
+    input[type=submit]{
+        width: 20%
+    }
+}
+
+.sidenav {
+    display: none;
 }
