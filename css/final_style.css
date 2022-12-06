@@ -1,0 +1,229 @@
+.skip{
+    position: absolute;
+    top: -40px;
+  }
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+nav li{
+    padding-right:10px;
+	display: inline;
+}
+
+nav a{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-decoration: double;
+    padding: 10px;
+}
+
+nav a:hover{
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+.active{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+nav{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #cbd6bc;
+    padding: 25px 0; 
+    text-align: right;
+}
+
+body{
+    background-color:#cbd6bc;
+}
+
+button{
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: 2px solid #467247;
+    color: black;
+    background-color: #CBD6BC;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #467247;
+    color: white;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* for mobile */
+.sidebyside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+h1{ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.newspaper_gallery{
+    display: grid;
+    row-gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.hobby_gallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobby_gallery img{
+    margin:10px;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+    .newspaper_gallery{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    .newspaper_gallery img{
+        width: 100%;
+    }
+
+    .hobby_gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hobby_gallery img{
+        margin: 10px;
+        border: 5px solid black;
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 1050px) {
+
+/* insert media query 1050  */
+
+    .title{
+        margin: 50px;
+        text-align: left;
+    }
+
+    .center{
+        display: flex;
+        align-items: center;
+        background: #243820;
+        color: white;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+        align-items: center;
+        text-align: center;
+        margin: 50px;
+    }
+
+    .sidebyside{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .newspaper_gallery{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 50px;
+        row-gap: 50px;
+        align-items: center;
+        margin: 50px;
+    }
+
+    .newspaper_gallery img{
+        width: 100%;
+        border: 15px solid transparent;
+        border-image: url(../images/newspaper.jpeg) 20 stretch;
+    }
+
+    .hobby_gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .hobby_gallery img {
+        width:30%;
+        align-self: center;
+        margin: 10px;
+        border: 10px solid black;
+        box-shadow: 5px 5px 5px #54704e;
+        
+    }
+}
