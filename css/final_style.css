@@ -9,41 +9,6 @@
   height: auto;
 }
 
-/* .sidenav{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    height:100%;
-    width: 0%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #243820;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-} */
-
-/* .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #CBD6BC;
-    display: block;
-  } */
-
-/* .sidenav a:hover {
-    color: white;
-} */
-
-/* .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-} */
-
 #hamburger-menu {
     position: fixed;
     top: 20px;
@@ -148,8 +113,8 @@ body{
 }
 
 fieldset{
-    background-color: #243820;
-    color:white;
+    background-color: #CBD6BC;
+    color:black;
     
 }
 
@@ -287,7 +252,11 @@ p {
     margin:10px;
 }
 
-
+footer{
+    background:#243820;
+    color: white;
+    text-align: center;
+}
 
 @media screen and (min-width: 700px) {
 
@@ -416,6 +385,16 @@ p {
         border-image: url(../images/newspaper.jpeg) 20 stretch;
     }
 
+
+
+    .newspaper_gallery img:hover{
+        border: 2px solid transparent;
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5); 
+        transition: 0.3s;
+    }
+
     .hobby_gallery {
         display: flex;
         flex-wrap: wrap;
@@ -431,6 +410,16 @@ p {
         box-shadow: 5px 5px 5px #54704e;
         
     }
+
+    .hobby_gallery img:hover{
+        border: 2px solid transparent;
+        box-shadow: none;
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5); 
+        transition: 0.3s;
+    }
+
     fieldset p {
         text-align: left;
     }
@@ -444,16 +433,50 @@ p {
     }
 
 
-/* .sidenav {
-    display: none;
-} */
+    #notmobile{
+        display: inline;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #cbd6bc;
+        padding: 25px 0; 
+        text-align: right;
+        }
 
-#notmobile{
-    display: inline;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #cbd6bc;
-    padding: 25px 0; 
-    text-align: right;
+    .typewriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 45% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgb(255, 255, 255); }
+      }
+}
+
+@media (prefers-reduced-motion) {
+    .typewriter{
+        animation: none;
+    }
+
+    .newspaper_gallery img{
+        pointer-events: none;
+    }
+
+    .hobby_gallery img{
+        pointer-events: none;
     }
 }
+
