@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="icon" href="imgs/email.png"/> -->
-  <title>Contact Me!</title>
+  <title>Contact Me</title>
   <link rel="stylesheet" href="css/final_style.css"/>
 
 </head>
 <body>
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
-        <nav>
+        <nav id="notmobile">
             <ul>
                 <li><a href = "index.html" >About Me</a></li>
                 <li><a href = "michigan_daily.html" >Michigan Daily</a></li>
@@ -19,6 +19,20 @@
                 <li class="active"><a href = "contact.html">Contact Me</a></li>
             </ul>
         </nav>
+
+        <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu">
+            <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="michigan_daily.html">Michigan Daily</a></li>
+            <li><a href="hobby.html">Hobby Work</a></li>
+            <li class="active"><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        </label>
+
+        <div class="overlay"></div>
     </header>
     <!-- Action removed for security purposes -->
     <main id = "main">

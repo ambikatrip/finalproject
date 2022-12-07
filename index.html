@@ -10,17 +10,7 @@
 <body>
     <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
-        <nav>
-            <!-- <div id="navigation" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <ul>
-                <li class="active"><a href="index.html">About Me</a></li>
-                <li><a href="michigan_daily.html">Michigan Daily</a></li>
-                <li><a href="hobby.html">Hobby Work</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                </ul>
-              </div> -->
-
+        <nav id="notmobile">
             <ul>
                 <li class="active"><a href = "index.html" >About Me</a></li>
                 <li><a href = "michigan_daily.html" >Michigan Daily</a></li>
@@ -28,11 +18,21 @@
                 <li><a href = "contact.html">Contact Me</a></li>
             </ul>
         </nav>
-        <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
+
+        <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu">
+            <ul>
+            <li class="active"><a href="index.html">About Me</a></li>
+            <li><a href="michigan_daily.html">Michigan Daily</a></li>
+            <li><a href="hobby.html">Hobby Work</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+        </label>
+
+        <div class="overlay"></div>
     </header>
-    
-
-
 
     <main id = "main">
         <div class="center">
